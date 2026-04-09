@@ -59,9 +59,9 @@ export default function GTMSystemPage() {
             </p>
           </div>
 
-          {/* Architecture Diagram Placeholder */}
-          <div className="mb-12 flex aspect-[16/9] items-center justify-center rounded-lg border-2 border-dashed border-card-border bg-card-hover">
-            <span className="text-sm text-muted">Architecture Diagram</span>
+          {/* Pipeline Walkthrough Placeholder */}
+          <div className="mb-12 flex aspect-video items-center justify-center rounded-lg border-2 border-dashed border-card-border bg-card-hover">
+            <span className="text-sm text-muted">Pipeline walkthrough coming soon</span>
           </div>
 
           {/* Feature Bullets */}
