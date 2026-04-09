@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" font-family="Inter, -apple-system, system-ui, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 6" refX="10" refY="3" markerWidth="10" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,3 L0,6 Z" fill="#64748b"/>
+    </marker>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="112%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="520" rx="12" fill="#fafafa"/>
+
+  <!-- Title -->
+  <text x="450" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">GTM Automation Engine — Pipeline Flow</text>
+
+  <!-- HubSpot CRM (source) -->
+  <rect x="350" y="56" width="200" height="44" rx="8" fill="#f97316" filter="url(#shadow)"/>
+  <text x="450" y="83" text-anchor="middle" font-size="14" font-weight="600" fill="#fff">HubSpot CRM</text>
+
+  <!-- Arrow down from HubSpot -->
+  <line x1="450" y1="100" x2="450" y2="130" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Row 1: Data Connector -->
+  <rect x="295" y="132" width="310" height="52" rx="8" fill="#fff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="450" y="154" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">hubspot-data-connector</text>
+  <text x="450" y="172" text-anchor="middle" font-size="11" fill="#64748b">Pull contacts, companies, deals with pagination</text>
+
+  <!-- Arrow -->
+  <line x1="450" y1="184" x2="450" y2="210" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Row 2: Enrichment -->
+  <rect x="295" y="212" width="310" height="52" rx="8" fill="#fff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="450" y="234" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">lead-enrichment-pipeline</text>
+  <text x="450" y="252" text-anchor="middle" font-size="11" fill="#64748b">Enrich via PDL: employee count, revenue, industry</text>
+
+  <!-- Arrow -->
+  <line x1="450" y1="264" x2="450" y2="290" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Row 3: ML Scoring -->
+  <rect x="295" y="292" width="310" height="52" rx="8" fill="#fff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="450" y="314" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">ml-lead-scoring-model</text>
+  <text x="450" y="332" text-anchor="middle" font-size="11" fill="#64748b">Logistic regression ICP scoring (0-100)</text>
+
+  <!-- Arrow -->
+  <line x1="450" y1="344" x2="450" y2="370" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Row 4: Composite Scorer -->
+  <rect x="295" y="372" width="310" height="52" rx="8" fill="#fff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="450" y="394" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">composite-lead-scorer</text>
+  <text x="450" y="412" text-anchor="middle" font-size="11" fill="#64748b">Weighted composite (50/25/25) + priority tiers</text>
+
+  <!-- Arrows splitting left and right from composite -->
+  <line x1="370" y1="424" x2="200" y2="456" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="530" y1="424" x2="700" y2="456" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Row 5 Left: Territory Router -->
+  <rect x="50" y="458" width="300" height="52" rx="8" fill="#fff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="200" y="480" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">territory-routing-service</text>
+  <text x="200" y="498" text-anchor="middle" font-size="11" fill="#64748b">Webhook: assign reps by territory + size</text>
+
+  <!-- Row 5 Right: AI Outreach -->
+  <rect x="550" y="458" width="300" height="52" rx="8" fill="#fff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="700" y="480" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">ai-outreach-engine</text>
+  <text x="700" y="498" text-anchor="middle" font-size="11" fill="#64748b">Claude: ICP classify, intent detect, outreach gen</text>
+
+  <!-- HubSpot write-back arrows (curved, going back up to HubSpot) -->
+  <!-- Left write-back from router -->
+  <path d="M50,480 L20,480 L20,78 L348,78" fill="none" stroke="#f97316" stroke-width="1.2" stroke-dasharray="5,3" marker-end="url(#arrow)"/>
+  <!-- Right write-back from outreach -->
+  <path d="M850,480 L880,480 L880,78 L552,78" fill="none" stroke="#f97316" stroke-width="1.2" stroke-dasharray="5,3" marker-end="url(#arrow)"/>
+  <!-- ML scoring write-back -->
+  <path d="M607,318 L640,318 L640,200 L640,78 L552,78" fill="none" stroke="#f97316" stroke-width="1.0" stroke-dasharray="4,3"/>
+
+  <!-- Legend -->
+  <line x1="640" y1="38" x2="670" y2="38" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="676" y="42" font-size="10" fill="#64748b">Data flow</text>
+  <line x1="748" y1="38" x2="778" y2="38" stroke="#f97316" stroke-width="1.2" stroke-dasharray="5,3"/>
+  <text x="784" y="42" font-size="10" fill="#f97316">Write-back to CRM</text>
+
+  <!-- Dashboard label (floating, connected to composite) -->
+  <rect x="620" y="372" width="230" height="40" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="735" y="390" text-anchor="middle" font-size="12" font-weight="600" fill="#475569">gtm-intelligence-dashboard</text>
+  <text x="735" y="404" text-anchor="middle" font-size="10" fill="#94a3b8">Streamlit: scores, routing, projections</text>
+  <line x1="620" y1="392" x2="607" y2="398" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="3,2"/>
+</svg>
