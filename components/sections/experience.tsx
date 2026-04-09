@@ -4,42 +4,26 @@ interface Experience {
   dateRange: string;
   title: string;
   company: string;
-  companyUrl: string;
+  /** Omit or leave empty for a non-linked company name */
+  companyUrl?: string;
   description: string;
 }
 
 const experiences: Experience[] = [
   {
-    dateRange: "2024 — PRESENT",
-    title: "Senior GTM Systems Engineer",
-    company: "TechCorp",
-    companyUrl: "https://techcorp.com",
+    dateRange: "2022 — 2025",
+    title: "Partnerships Lead",
+    company: "Chapter",
+    companyUrl: "https://askchapter.org/",
     description:
-      "Lead the architecture and implementation of end-to-end revenue operations infrastructure. Built automated lead scoring and routing systems that reduced response time by 60%. Integrated AI-powered enrichment workflows processing 10,000+ leads monthly.",
-  },
-  {
-    dateRange: "2022 — 2024",
-    title: "Revenue Operations Manager",
-    company: "GrowthStartup",
-    companyUrl: "https://growthstartup.com",
-    description:
-      "Designed and deployed the company's entire GTM tech stack from the ground up. Created custom integrations between marketing automation, CRM, and analytics platforms. Established data governance practices that improved lead quality by 40%.",
+      "Led GTM strategy across all partnership verticals, scaling from a solo role to a team of three. Selected and deployed the full GTM tech stack and owned RevOps infrastructure end to end. Built the outbound engine responsible for roughly 80% of Chapter's revenue as the company grew from Series B to Series D.",
   },
   {
     dateRange: "2020 — 2022",
-    title: "Marketing Operations Specialist",
-    company: "Enterprise Inc",
-    companyUrl: "https://enterprise.com",
+    title: "Financial Advisor",
+    company: "McAdam Financial",
     description:
-      "Managed marketing automation campaigns across multiple channels. Built and maintained lead nurturing workflows that generated $2M+ in pipeline. Collaborated with sales teams to optimize lead handoff processes.",
-  },
-  {
-    dateRange: "2018 — 2020",
-    title: "Sales Development Representative",
-    company: "StartupCo",
-    companyUrl: "https://startupco.com",
-    description:
-      "Started career in sales, quickly became fascinated by the systems behind the process. Began automating personal workflows which led to a pivot into operations. Top performer for 6 consecutive quarters.",
+      "Built a financial advisory book of business from scratch with 100% client retention. Selected within the first five months to teach client acquisition tactics company-wide based on conversion ratio.",
   },
 ];
 
@@ -55,21 +39,27 @@ function ExperienceCard({ experience }: { experience: Experience }) {
       </header>
       <div className="z-10 sm:col-span-6">
         <h3 className="font-medium leading-snug text-foreground">
-          <a
-            href={experience.companyUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group/link inline-flex items-baseline text-base font-medium leading-tight text-foreground hover:text-accent focus-visible:text-accent"
-          >
-            <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block" />
-            <span>
-              {experience.title} ·{" "}
-              <span className="inline-block">
-                {experience.company}
-                <ArrowUpRight className="ml-1 inline-block h-4 w-4 shrink-0 translate-y-px transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none" />
+          {experience.companyUrl ? (
+            <a
+              href={experience.companyUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group/link inline-flex items-baseline text-base font-medium leading-tight text-foreground hover:text-accent focus-visible:text-accent"
+            >
+              <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block" />
+              <span>
+                {experience.title} ·{" "}
+                <span className="inline-block">
+                  {experience.company}
+                  <ArrowUpRight className="ml-1 inline-block h-4 w-4 shrink-0 translate-y-px transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none" />
+                </span>
               </span>
+            </a>
+          ) : (
+            <span className="text-base font-medium leading-tight">
+              {experience.title} · {experience.company}
             </span>
-          </a>
+          )}
         </h3>
         <p className="mt-2 text-sm leading-normal text-muted">
           {experience.description}
@@ -106,7 +96,7 @@ export function ExperienceSection() {
             rel="noopener noreferrer"
             className="group inline-flex items-center gap-1 text-sm font-medium text-foreground hover:text-accent transition-colors"
           >
-            View Full Résumé
+            View Full Resume
             <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
           </a>
         </div>

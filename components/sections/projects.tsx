@@ -1,16 +1,49 @@
 import Link from "next/link";
-import { ArrowUpRight, Github, FileText } from "lucide-react";
+import { Github, FileText } from "lucide-react";
 
 const componentCards = [
-  { title: "Lead Enrichment Engine", description: "Waterfall API strategy for 95%+ fill rates on firmographic data" },
-  { title: "ICP Scoring Model", description: "Multi-factor scoring based on fit, intent, and engagement signals" },
-  { title: "Pain Signal Detector", description: "AI-powered analysis of hiring, funding, and tech stack changes" },
-  { title: "Smart Router", description: "Rules-based assignment with round-robin and territory logic" },
-  { title: "AI BDR Agent", description: "Personalized outreach sequences triggered by buying signals" },
-  { title: "Revenue Dashboard", description: "Real-time pipeline visibility with conversion analytics" },
+  {
+    title: "Lead Enrichment",
+    description:
+      "Enriches companies via PDL API with employee count, revenue, industry, and tech stack",
+  },
+  {
+    title: "ML Scoring Model",
+    description:
+      "Trains a logistic regression model and scores HubSpot companies as ICP fit (0-100)",
+  },
+  {
+    title: "Pain Signal Detector",
+    description:
+      "Detects relevant pain signals from news data and writes structured results to HubSpot",
+  },
+  {
+    title: "Territory Router",
+    description:
+      "FastAPI webhook service that routes new companies to reps by territory and company size",
+  },
+  {
+    title: "AI Outreach Engine",
+    description:
+      "Claude-powered pipeline for ICP classification, intent detection, and outreach generation",
+  },
+  {
+    title: "Analytics Dashboard",
+    description:
+      "Streamlit dashboard for company filtering, routing audit, and pipeline health projections",
+  },
 ];
 
-const gtmTechStack = ["Next.js", "TypeScript", "Supabase", "n8n", "Claude API", "HubSpot API"];
+const gtmTechStack = [
+  "Python",
+  "Claude API",
+  "HubSpot API",
+  "scikit-learn",
+  "FastAPI",
+  "Streamlit",
+  "PostgreSQL",
+  "PDL API",
+];
 
 function GTMFeaturedProject() {
   return (
@@ -24,9 +57,13 @@ function GTMFeaturedProject() {
       </div>
 
       {/* Title and Description */}
-      <h3 className="text-xl font-semibold text-foreground mb-3">GTM System</h3>
+      <h3 className="text-xl font-semibold text-foreground mb-3">
+        Automated Lead Scoring and Outreach Engine
+      </h3>
       <p className="text-muted leading-relaxed mb-8 max-w-3xl">
-        A complete lead-to-revenue infrastructure built on live HubSpot data. This system automates the entire GTM workflow: enriching leads from multiple data providers, scoring them against ICP criteria, detecting pain signals with AI, routing to the right reps, and triggering personalized outreach sequences.
+        AI-powered automated enrichment, firmographic scoring, pain signal detection, ownership
+        assignment, and customized outreach generation. Integrated end-to-end with a live HubSpot
+        CRM.
       </p>
 
       {/* Component Cards Grid */}
@@ -57,7 +94,7 @@ function GTMFeaturedProject() {
       {/* Buttons */}
       <div className="flex flex-wrap gap-3">
         <a
-          href="https://github.com"
+          href="https://github.com/thor-sen/gtm-automation-engine"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-accent/10 text-accent text-sm font-medium hover:bg-accent/20 transition-colors"
@@ -82,17 +119,16 @@ function SimpleProjectCard() {
     <div className="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
       <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-card-hover lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg" />
       <div className="z-10 sm:order-2 sm:col-span-6">
-        <h3 className="font-medium leading-snug text-foreground">
-          <span className="inline-flex items-baseline text-base font-medium leading-tight text-foreground group-hover:text-accent">
-            <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block" />
-            <span>AI Sales Call Scorer</span>
-          </span>
+        <h3 className="text-base font-medium leading-snug text-foreground group-hover:text-accent">
+          AI Sales Call Scorer
         </h3>
         <p className="mt-2 text-sm leading-normal text-muted">
-          Automated system that analyzes sales call transcripts using Claude to score rep performance, identify coaching opportunities, and extract key insights. Outputs structured JSON for easy integration with CRM and coaching platforms.
+          A three-pass AI scoring system for sales calls. Scores rep performance against a weighted
+          rubric, generates specific coaching feedback, and evaluates opportunity fit independent of
+          how well the rep executed.
         </p>
         <ul className="mt-2 flex flex-wrap" aria-label="Technologies used">
-          {["Python", "Claude API", "FastAPI", "JSON"].map((tech) => (
+          {["Python", "Claude API", "JSON"].map((tech) => (
             <li key={tech} className="mr-1.5 mt-2">
               <div className="flex items-center rounded-full bg-tag-bg px-3 py-1 text-xs font-medium leading-5 text-accent">
                 {tech}
@@ -101,10 +137,10 @@ function SimpleProjectCard() {
           ))}
         </ul>
         <a
-          href="https://github.com"
+          href="https://github.com/thor-sen/ai-sales-call-scorer"
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-md bg-accent/10 text-accent text-sm font-medium hover:bg-accent/20 transition-colors"
+          className="relative z-20 mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-md bg-accent/10 text-accent text-sm font-medium hover:bg-accent/20 transition-colors"
         >
           <Github className="h-4 w-4" />
           View on GitHub
@@ -139,16 +175,6 @@ export function ProjectsSection() {
             <SimpleProjectCard />
           </li>
         </ul>
-
-        <div className="mt-12">
-          <a
-            href="/projects"
-            className="group inline-flex items-center gap-1 text-sm font-medium text-foreground hover:text-accent transition-colors"
-          >
-            View Full Project Archive
-            <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-          </a>
-        </div>
       </div>
     </section>
   );
