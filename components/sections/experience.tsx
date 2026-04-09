@@ -1,0 +1,144 @@
+import { ArrowUpRight } from "lucide-react";
+
+interface Experience {
+  dateRange: string;
+  title: string;
+  company: string;
+  companyUrl: string;
+  description: string;
+  technologies: string[];
+}
+
+const experiences: Experience[] = [
+  {
+    dateRange: "2024 — PRESENT",
+    title: "Senior GTM Systems Engineer",
+    company: "TechCorp",
+    companyUrl: "https://techcorp.com",
+    description:
+      "Lead the architecture and implementation of end-to-end revenue operations infrastructure. Built automated lead scoring and routing systems that reduced response time by 60%. Integrated AI-powered enrichment workflows processing 10,000+ leads monthly.",
+    technologies: [
+      "HubSpot",
+      "Salesforce",
+      "n8n",
+      "Python",
+      "AI Agents",
+      "Clearbit",
+    ],
+  },
+  {
+    dateRange: "2022 — 2024",
+    title: "Revenue Operations Manager",
+    company: "GrowthStartup",
+    companyUrl: "https://growthstartup.com",
+    description:
+      "Designed and deployed the company's entire GTM tech stack from the ground up. Created custom integrations between marketing automation, CRM, and analytics platforms. Established data governance practices that improved lead quality by 40%.",
+    technologies: [
+      "HubSpot",
+      "Segment",
+      "dbt",
+      "SQL",
+      "Zapier",
+      "Google Analytics",
+    ],
+  },
+  {
+    dateRange: "2020 — 2022",
+    title: "Marketing Operations Specialist",
+    company: "Enterprise Inc",
+    companyUrl: "https://enterprise.com",
+    description:
+      "Managed marketing automation campaigns across multiple channels. Built and maintained lead nurturing workflows that generated $2M+ in pipeline. Collaborated with sales teams to optimize lead handoff processes.",
+    technologies: ["Marketo", "Salesforce", "Tableau", "JavaScript", "REST APIs"],
+  },
+  {
+    dateRange: "2018 — 2020",
+    title: "Sales Development Representative",
+    company: "StartupCo",
+    companyUrl: "https://startupco.com",
+    description:
+      "Started career in sales, quickly became fascinated by the systems behind the process. Began automating personal workflows which led to a pivot into operations. Top performer for 6 consecutive quarters.",
+    technologies: ["Outreach", "LinkedIn Sales Navigator", "Salesforce", "Excel"],
+  },
+];
+
+function ExperienceCard({ experience }: { experience: Experience }) {
+  return (
+    <div className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+      <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-card-hover lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg" />
+      <header
+        className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-muted sm:col-span-2"
+        aria-label={experience.dateRange}
+      >
+        {experience.dateRange}
+      </header>
+      <div className="z-10 sm:col-span-6">
+        <h3 className="font-medium leading-snug text-foreground">
+          <a
+            href={experience.companyUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group/link inline-flex items-baseline text-base font-medium leading-tight text-foreground hover:text-accent focus-visible:text-accent"
+          >
+            <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block" />
+            <span>
+              {experience.title} ·{" "}
+              <span className="inline-block">
+                {experience.company}
+                <ArrowUpRight className="ml-1 inline-block h-4 w-4 shrink-0 translate-y-px transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none" />
+              </span>
+            </span>
+          </a>
+        </h3>
+        <p className="mt-2 text-sm leading-normal text-muted">
+          {experience.description}
+        </p>
+        <ul className="mt-2 flex flex-wrap" aria-label="Technologies used">
+          {experience.technologies.map((tech) => (
+            <li key={tech} className="mr-1.5 mt-2">
+              <div className="flex items-center rounded-full bg-tag-bg px-3 py-1 text-xs font-medium leading-5 text-accent">
+                {tech}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+}
+
+export function ExperienceSection() {
+  return (
+    <section
+      id="experience"
+      className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
+      aria-label="Work experience"
+    >
+      <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-background/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
+        <h2 className="text-sm font-bold uppercase tracking-widest text-foreground lg:sr-only">
+          Experience
+        </h2>
+      </div>
+      <div>
+        <ol className="group/list space-y-12">
+          {experiences.map((experience, index) => (
+            <li key={index}>
+              <ExperienceCard experience={experience} />
+            </li>
+          ))}
+        </ol>
+        <div className="mt-12">
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-1 text-sm font-medium text-foreground hover:text-accent transition-colors"
+          >
+            View Full Résumé
+            <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
