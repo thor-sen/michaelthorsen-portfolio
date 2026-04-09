@@ -1,14 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight, ArrowRight, Github, FileText } from "lucide-react";
-
-const pipelineStages = [
-  { name: "HubSpot CRM", description: "Source of truth" },
-  { name: "Enrichment", description: "Data augmentation" },
-  { name: "Scoring", description: "Lead prioritization" },
-  { name: "Routing", description: "Rep assignment" },
-  { name: "AI BDR", description: "Automated outreach" },
-  { name: "Dashboard", description: "Analytics & reporting" },
-];
+import { ArrowUpRight, Github, FileText } from "lucide-react";
 
 const componentCards = [
   { title: "Lead Enrichment Engine", description: "Waterfall API strategy for 95%+ fill rates on firmographic data" },
@@ -37,22 +28,6 @@ function GTMFeaturedProject() {
       <p className="text-muted leading-relaxed mb-8 max-w-3xl">
         A complete lead-to-revenue infrastructure built on live HubSpot data. This system automates the entire GTM workflow: enriching leads from multiple data providers, scoring them against ICP criteria, detecting pain signals with AI, routing to the right reps, and triggering personalized outreach sequences.
       </p>
-
-      {/* Pipeline Diagram */}
-      <div className="mb-8 overflow-x-auto pb-2">
-        <div className="flex items-center gap-2 min-w-max">
-          {pipelineStages.map((stage, index) => (
-            <div key={stage.name} className="flex items-center shrink-0">
-              <div className="px-3 py-2 rounded-md bg-tag-bg border border-card-border text-center min-w-[100px]">
-                <div className="text-xs font-medium text-accent whitespace-nowrap">{stage.name}</div>
-              </div>
-              {index < pipelineStages.length - 1 && (
-                <ArrowRight className="h-4 w-4 text-muted mx-2 shrink-0" />
-              )}
-            </div>
-          ))}
-        </div>
-      </div>
 
       {/* Component Cards Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
