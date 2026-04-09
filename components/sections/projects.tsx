@@ -39,17 +39,15 @@ function GTMFeaturedProject() {
       </p>
 
       {/* Pipeline Diagram */}
-      <div className="mb-8">
-        <div className="flex flex-wrap items-center justify-start gap-2 lg:gap-0 lg:justify-between">
+      <div className="mb-8 overflow-x-auto pb-2">
+        <div className="flex items-center gap-2 min-w-max">
           {pipelineStages.map((stage, index) => (
-            <div key={stage.name} className="flex items-center">
-              <div className="flex flex-col items-center">
-                <div className="px-3 py-2 rounded-md bg-tag-bg border border-card-border text-center min-w-[100px]">
-                  <div className="text-xs font-medium text-accent">{stage.name}</div>
-                </div>
+            <div key={stage.name} className="flex items-center shrink-0">
+              <div className="px-3 py-2 rounded-md bg-tag-bg border border-card-border text-center min-w-[100px]">
+                <div className="text-xs font-medium text-accent whitespace-nowrap">{stage.name}</div>
               </div>
               {index < pipelineStages.length - 1 && (
-                <ArrowRight className="h-4 w-4 text-muted mx-2 hidden lg:block" />
+                <ArrowRight className="h-4 w-4 text-muted mx-2 shrink-0" />
               )}
             </div>
           ))}
