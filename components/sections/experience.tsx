@@ -6,7 +6,6 @@ interface Experience {
   company: string;
   companyUrl: string;
   description: string;
-  technologies: string[];
 }
 
 const experiences: Experience[] = [
@@ -17,14 +16,6 @@ const experiences: Experience[] = [
     companyUrl: "https://techcorp.com",
     description:
       "Lead the architecture and implementation of end-to-end revenue operations infrastructure. Built automated lead scoring and routing systems that reduced response time by 60%. Integrated AI-powered enrichment workflows processing 10,000+ leads monthly.",
-    technologies: [
-      "HubSpot",
-      "Salesforce",
-      "n8n",
-      "Python",
-      "AI Agents",
-      "Clearbit",
-    ],
   },
   {
     dateRange: "2022 — 2024",
@@ -33,14 +24,6 @@ const experiences: Experience[] = [
     companyUrl: "https://growthstartup.com",
     description:
       "Designed and deployed the company's entire GTM tech stack from the ground up. Created custom integrations between marketing automation, CRM, and analytics platforms. Established data governance practices that improved lead quality by 40%.",
-    technologies: [
-      "HubSpot",
-      "Segment",
-      "dbt",
-      "SQL",
-      "Zapier",
-      "Google Analytics",
-    ],
   },
   {
     dateRange: "2020 — 2022",
@@ -49,7 +32,6 @@ const experiences: Experience[] = [
     companyUrl: "https://enterprise.com",
     description:
       "Managed marketing automation campaigns across multiple channels. Built and maintained lead nurturing workflows that generated $2M+ in pipeline. Collaborated with sales teams to optimize lead handoff processes.",
-    technologies: ["Marketo", "Salesforce", "Tableau", "JavaScript", "REST APIs"],
   },
   {
     dateRange: "2018 — 2020",
@@ -58,7 +40,6 @@ const experiences: Experience[] = [
     companyUrl: "https://startupco.com",
     description:
       "Started career in sales, quickly became fascinated by the systems behind the process. Began automating personal workflows which led to a pivot into operations. Top performer for 6 consecutive quarters.",
-    technologies: ["Outreach", "LinkedIn Sales Navigator", "Salesforce", "Excel"],
   },
 ];
 
@@ -93,15 +74,6 @@ function ExperienceCard({ experience }: { experience: Experience }) {
         <p className="mt-2 text-sm leading-normal text-muted">
           {experience.description}
         </p>
-        <ul className="mt-2 flex flex-wrap" aria-label="Technologies used">
-          {experience.technologies.map((tech) => (
-            <li key={tech} className="mr-1.5 mt-2">
-              <div className="flex items-center rounded-full bg-tag-bg px-3 py-1 text-xs font-medium leading-5 text-accent">
-                {tech}
-              </div>
-            </li>
-          ))}
-        </ul>
       </div>
     </div>
   );
