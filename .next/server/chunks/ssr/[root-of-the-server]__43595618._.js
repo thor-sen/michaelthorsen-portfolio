@@ -44,11 +44,11 @@ var __TURBOPACK__imported__module__$5b$next$5d2f$internal$2f$font$2f$google$2f$i
 ;
 ;
 const metadata = {
-    title: "Michael Thorsen | GTM Systems Engineer",
-    description: "Personal portfolio of Michael Thorsen — GTM Systems Engineer building infrastructure that makes revenue teams scale.",
+    title: "Michael Thorsen",
+    description: "Personal portfolio of Michael Thorsen — GTM operator. I build revenue systems and the teams to run them.",
     openGraph: {
-        title: "Michael Thorsen | GTM Systems Engineer",
-        description: "Personal portfolio of Michael Thorsen — GTM Systems Engineer building infrastructure that makes revenue teams scale.",
+        title: "Michael Thorsen",
+        description: "Personal portfolio of Michael Thorsen — GTM operator. I build revenue systems and the teams to run them.",
         type: "website"
     }
 };

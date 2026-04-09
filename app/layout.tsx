@@ -8,13 +8,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Michael Thorsen | GTM Systems Engineer",
+  title: "Michael Thorsen",
   description:
-    "Personal portfolio of Michael Thorsen — GTM Systems Engineer building infrastructure that makes revenue teams scale.",
+    "Personal portfolio of Michael Thorsen — GTM operator. I build revenue systems and the teams to run them.",
   openGraph: {
-    title: "Michael Thorsen | GTM Systems Engineer",
+    title: "Michael Thorsen",
     description:
-      "Personal portfolio of Michael Thorsen — GTM Systems Engineer building infrastructure that makes revenue teams scale.",
+      "Personal portfolio of Michael Thorsen — GTM operator. I build revenue systems and the teams to run them.",
     type: "website",
   },
 };
