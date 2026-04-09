@@ -125,6 +125,15 @@ function SimpleProjectCard() {
             </li>
           ))}
         </ul>
+        <a
+          href="https://github.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-md bg-accent/10 text-accent text-sm font-medium hover:bg-accent/20 transition-colors"
+        >
+          <Github className="h-4 w-4" />
+          View on GitHub
+        </a>
       </div>
       <div className="z-10 sm:order-1 sm:col-span-2">
         <div className="aspect-video w-full rounded border-2 border-card-border bg-gradient-to-br from-accent/10 to-accent/5 transition group-hover:border-muted/50" />
