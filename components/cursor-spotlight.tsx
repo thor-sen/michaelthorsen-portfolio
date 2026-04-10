@@ -30,7 +30,7 @@ export function CursorSpotlight() {
       className="pointer-events-none fixed inset-0 z-30 transition-opacity duration-300"
       style={{
         opacity: isVisible ? 1 : 0,
-        background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, rgba(29, 78, 116, 0.15), transparent 80%)`,
+        background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, rgba(107, 39, 55, 0.16), transparent 80%)`,
       }}
     />
   );
