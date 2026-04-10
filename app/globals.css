@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #0f172a;
-  --color-foreground: #e2e8f0;
-  --color-muted: #94a3b8;
-  --color-accent: #5eead4;
-  --color-accent-muted: rgba(94, 234, 212, 0.1);
-  --color-card-hover: rgba(148, 163, 184, 0.05);
-  --color-card-border: rgba(148, 163, 184, 0.1);
-  --color-tag-bg: rgba(94, 234, 212, 0.1);
-  
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-background: #1c1410;
+  --color-foreground: #f3ede3;
+  --color-muted: #b8a99a;
+  --color-accent: #6b2737;
+  --color-accent-muted: rgba(107, 39, 55, 0.14);
+  --color-card-hover: rgba(243, 237, 227, 0.05);
+  --color-card-border: rgba(243, 237, 227, 0.12);
+  --color-tag-bg: rgba(107, 39, 55, 0.18);
+
+  --font-sans: var(--font-eb-garamond), "EB Garamond", ui-serif, Georgia, "Times New Roman", serif;
 }
 
 html {
@@ -24,6 +24,6 @@ body {
 }
 
 ::selection {
-  background-color: rgba(94, 234, 212, 0.3);
+  background-color: rgba(107, 39, 55, 0.45);
   color: var(--color-foreground);
 }
