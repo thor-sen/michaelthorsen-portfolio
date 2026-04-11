@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Github, FileText } from "lucide-react";
 
@@ -130,40 +129,49 @@ function GTMFeaturedProject() {
   );
 }
 
+const salesCallScorerTags = ["Python", "Claude API", "JSON"];
+
 function SimpleProjectCard() {
   return (
-    <div className="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
-      <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-card-hover lg:group-hover:shadow-[inset_0_1px_0_0_rgba(242,237,228,0.12)] lg:group-hover:drop-shadow-lg" />
-      <div className="z-10 sm:order-2 sm:col-span-6">
-        <h3 className="text-base font-medium leading-snug text-foreground group-hover:text-accent transition-colors">
+    <div className="group relative overflow-hidden rounded-lg border border-card-border/50 bg-background/25 transition-colors lg:hover:!opacity-100 lg:group-hover/list:opacity-50 lg:hover:border-card-border/70 lg:hover:bg-background/40">
+      {/* Full card-width video strip (no side padding) */}
+      <div className="flex aspect-[80/27] w-full items-center justify-center border-b border-card-border/35 bg-gradient-to-b from-accent/5 to-background/30">
+        <div className="px-4 py-2 text-center">
+          <div className="text-xs font-medium text-muted">Video preview</div>
+          <div className="text-[11px] text-muted/70">Coming soon</div>
+        </div>
+      </div>
+
+      <div className="p-4 lg:p-5">
+        <h3 className="text-lg font-medium leading-snug text-foreground transition-colors group-hover:text-accent">
           AI Sales Call Scorer
         </h3>
-        <p className="mt-2 text-sm leading-normal text-muted">
+        <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted">
           A three-pass AI scoring system for sales calls. Scores rep performance against a weighted
           rubric, generates specific coaching feedback, and evaluates opportunity fit independent of
           how well the rep executed.
         </p>
-        <ul className="mt-2 flex flex-wrap" aria-label="Technologies used">
-          {["Python", "Claude API", "JSON"].map((tech) => (
-            <li key={tech} className="mr-1.5 mt-2">
-              <div className="flex items-center rounded-full bg-tag-bg px-3 py-1 text-xs font-medium leading-5 text-foreground">
-                {tech}
-              </div>
-            </li>
+
+        <div className="mt-4 flex flex-wrap gap-1.5" aria-label="Technologies used">
+          {salesCallScorerTags.map((tech) => (
+            <span
+              key={tech}
+              className="rounded-full border border-card-border/25 bg-background/40 px-2.5 py-0.5 text-[11px] font-medium text-muted"
+            >
+              {tech}
+            </span>
           ))}
-        </ul>
+        </div>
+
         <a
           href="https://github.com/thor-sen/ai-sales-call-scorer"
           target="_blank"
           rel="noopener noreferrer"
-          className="relative z-20 mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-md border border-card-border text-accent text-sm font-medium hover:bg-card-hover transition-colors"
+          className="relative z-10 mt-5 inline-flex items-center gap-1.5 rounded-md border border-card-border/45 px-3 py-1.5 text-xs font-medium text-accent transition-colors hover:border-card-border/70 hover:bg-card-hover/40"
         >
-          <Github className="h-4 w-4" />
+          <Github className="h-3.5 w-3.5" />
           View on GitHub
         </a>
-      </div>
-      <div className="z-10 sm:order-1 sm:col-span-2">
-        <div className="aspect-video w-full rounded border-2 border-card-border bg-gradient-to-br from-accent/10 to-accent/5 transition group-hover:border-muted/50" />
       </div>
     </div>
   );
