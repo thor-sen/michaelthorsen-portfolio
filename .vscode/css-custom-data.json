@@ -1,0 +1,9 @@
+{
+  "version": 1.1,
+  "atDirectives": [
+    {
+      "name": "@theme",
+      "description": "Tailwind CSS v4: define theme tokens (colors, fonts, etc.). See https://tailwindcss.com/docs/theme"
+    }
+  ]
+}
