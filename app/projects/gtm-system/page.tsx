@@ -44,7 +44,7 @@ export default function GTMSystemPage() {
               playsInline
               className="aspect-video w-full object-cover"
             >
-              <source src="/videos/gtm-system-hero.mp4" type="video/mp4" />
+              <source src="/videos/gtm-pipeline-dark.mp4" type="video/mp4" />
             </video>
           </div>
 

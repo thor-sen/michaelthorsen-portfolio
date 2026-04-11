@@ -64,12 +64,17 @@ function GTMFeaturedProject() {
       }}
       className="group relative block mb-16 rounded-lg border border-card-border bg-card-hover/30 p-6 lg:p-8 transition cursor-pointer lg:hover:bg-card-hover lg:hover:shadow-[inset_0_1px_0_0_rgba(242,237,228,0.12)] lg:hover:drop-shadow-lg"
     >
-      {/* Video Placeholder */}
-      <div className="aspect-video w-full rounded-lg border-2 border-card-border bg-background/50 flex items-center justify-center mb-6">
-        <div className="text-center">
-          <div className="text-foreground text-sm mb-2">Video Walkthrough</div>
-          <div className="text-foreground/50 text-xs">Coming soon</div>
-        </div>
+      {/* Video */}
+      <div className="aspect-video w-full overflow-hidden rounded-lg border-2 border-card-border mb-6">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="h-full w-full object-cover"
+        >
+          <source src="/videos/gtm-pipeline-light.mp4" type="video/mp4" />
+        </video>
       </div>
 
       {/* Title and Description */}
@@ -134,12 +139,17 @@ const salesCallScorerTags = ["Python", "Claude API", "JSON"];
 function SimpleProjectCard() {
   return (
     <div className="group relative overflow-hidden rounded-lg border border-card-border/50 bg-background/25 transition-colors lg:hover:!opacity-100 lg:group-hover/list:opacity-50 lg:hover:border-card-border/70 lg:hover:bg-background/40">
-      {/* Full card-width video strip (no side padding) */}
-      <div className="flex aspect-[80/27] w-full items-center justify-center border-b border-card-border/35 bg-gradient-to-b from-accent/5 to-background/30">
-        <div className="px-4 py-2 text-center">
-          <div className="text-xs font-medium text-muted">Video preview</div>
-          <div className="text-[11px] text-muted/70">Coming soon</div>
-        </div>
+      {/* Video strip */}
+      <div className="aspect-[80/27] w-full overflow-hidden border-b border-card-border/35">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="h-full w-full object-cover"
+        >
+          <source src="/videos/call-scorer.mp4" type="video/mp4" />
+        </video>
       </div>
 
       <div className="p-4 lg:p-5">
