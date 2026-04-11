@@ -58,13 +58,7 @@ export function Navigation() {
                   : "w-8 bg-accent/35 group-hover:w-16 group-hover:bg-accent"
               }`}
             />
-            <span
-              className={`text-xs font-bold tracking-widest transition-colors duration-300 ${
-                isActive
-                  ? "text-accent"
-                  : "text-muted group-hover:text-accent"
-              }`}
-            >
+            <span className="text-xs font-bold tracking-widest text-foreground transition-opacity duration-300 group-hover:opacity-90">
               {label}
             </span>
           </button>

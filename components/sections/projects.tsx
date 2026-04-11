@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { Github, FileText } from "lucide-react";
 
 const componentCards = [
@@ -46,18 +49,32 @@ const gtmTechStack = [
 ];
 
 function GTMFeaturedProject() {
+  const router = useRouter();
   return (
-    <div className="mb-16 rounded-lg border border-card-border bg-card-hover/30 p-6 lg:p-8">
+    <div
+      role="link"
+      tabIndex={0}
+      onClick={(e) => {
+        if ((e.target as HTMLElement).closest("a")) return;
+        router.push("/projects/gtm-system");
+      }}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" && !(e.target as HTMLElement).closest("a")) {
+          router.push("/projects/gtm-system");
+        }
+      }}
+      className="group relative block mb-16 rounded-lg border border-card-border bg-card-hover/30 p-6 lg:p-8 transition cursor-pointer lg:hover:bg-card-hover lg:hover:shadow-[inset_0_1px_0_0_rgba(242,237,228,0.12)] lg:hover:drop-shadow-lg"
+    >
       {/* Video Placeholder */}
       <div className="aspect-video w-full rounded-lg border-2 border-card-border bg-background/50 flex items-center justify-center mb-6">
         <div className="text-center">
-          <div className="text-muted text-sm mb-2">Video Walkthrough</div>
-          <div className="text-muted/50 text-xs">Coming soon</div>
+          <div className="text-foreground text-sm mb-2">Video Walkthrough</div>
+          <div className="text-foreground/50 text-xs">Coming soon</div>
         </div>
       </div>
 
       {/* Title and Description */}
-      <h3 className="text-xl font-semibold text-accent mb-3">
+      <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-accent transition-colors">
         Automated Lead Scoring and Outreach Engine
       </h3>
       <p className="text-muted leading-relaxed mb-8 max-w-3xl">
@@ -71,9 +88,9 @@ function GTMFeaturedProject() {
         {componentCards.map((card) => (
           <div
             key={card.title}
-            className="p-4 rounded-md border border-card-border bg-background/30 hover:border-muted/50 transition-colors"
+            className="group/sub p-4 rounded-md border border-card-border bg-background/30 hover:border-muted/50 transition-colors"
           >
-            <h4 className="text-sm font-medium text-accent mb-1">{card.title}</h4>
+            <h4 className="text-sm font-medium text-foreground mb-1 transition-colors group-hover/sub:text-accent">{card.title}</h4>
             <p className="text-xs text-muted leading-relaxed">{card.description}</p>
           </div>
         ))}
@@ -92,23 +109,22 @@ function GTMFeaturedProject() {
       </div>
 
       {/* Buttons */}
-      <div className="flex flex-wrap gap-3">
+      <div className="relative z-10 flex flex-wrap gap-3">
         <a
           href="https://github.com/thor-sen/gtm-automation-engine"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-card-border text-accent text-sm font-medium hover:bg-card-hover transition-colors"
+          className="relative z-20 inline-flex items-center gap-2 px-4 py-2 rounded-md border border-card-border text-accent text-sm font-medium hover:bg-card-hover transition-colors"
         >
           <Github className="h-4 w-4" />
           View on GitHub
         </a>
-        <Link
-          href="/projects/gtm-system"
+        <span
           className="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-card-border text-accent text-sm font-medium hover:bg-card-hover hover:border-muted/50 transition-colors"
         >
           <FileText className="h-4 w-4" />
           Read Writeup
-        </Link>
+        </span>
       </div>
     </div>
   );
@@ -117,9 +133,9 @@ function GTMFeaturedProject() {
 function SimpleProjectCard() {
   return (
     <div className="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
-      <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-card-hover lg:group-hover:shadow-[inset_0_1px_0_0_rgba(242,237,228,0.1)] lg:group-hover:drop-shadow-lg" />
+      <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-card-hover lg:group-hover:shadow-[inset_0_1px_0_0_rgba(242,237,228,0.12)] lg:group-hover:drop-shadow-lg" />
       <div className="z-10 sm:order-2 sm:col-span-6">
-        <h3 className="text-base font-medium leading-snug text-accent group-hover:text-muted">
+        <h3 className="text-base font-medium leading-snug text-foreground group-hover:text-accent transition-colors">
           AI Sales Call Scorer
         </h3>
         <p className="mt-2 text-sm leading-normal text-muted">
@@ -161,7 +177,7 @@ export function ProjectsSection() {
       aria-label="Selected projects"
     >
       <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-background/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
-        <h2 className="text-sm font-bold uppercase tracking-widest text-accent lg:sr-only">
+        <h2 className="text-sm font-bold uppercase tracking-widest text-foreground lg:sr-only">
           Projects
         </h2>
       </div>
