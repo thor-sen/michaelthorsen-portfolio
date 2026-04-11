@@ -29,7 +29,7 @@ export function ThorNameHeading() {
   }, [hover, emitBurst]);
 
   return (
-    <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
+    <h1 className="text-[36px] font-bold tracking-tight text-foreground">
       Michael{" "}
       <span
         ref={thorRef}
