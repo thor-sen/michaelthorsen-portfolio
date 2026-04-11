@@ -13,11 +13,12 @@ export function Sidebar() {
           height={120}
           className="mb-6 h-[120px] w-[120px] rounded-full object-cover"
           priority
+          unoptimized
         />
-        <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
+        <h1 className="text-4xl font-bold tracking-tight text-accent sm:text-5xl">
           Michael Thorsen
         </h1>
-        <h2 className="mt-3 text-lg font-medium tracking-tight text-foreground sm:text-xl">
+        <h2 className="mt-3 text-lg font-medium tracking-tight text-accent sm:text-xl">
           GTM Operator
         </h2>
         <p className="mt-4 max-w-xs leading-normal text-muted">
@@ -44,7 +45,7 @@ export function Sidebar() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
-              className="text-muted transition-colors hover:text-foreground"
+              className="text-muted transition-colors hover:text-accent"
             >
               <Github className="h-6 w-6" />
             </a>
@@ -55,7 +56,7 @@ export function Sidebar() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
-              className="text-muted transition-colors hover:text-foreground"
+              className="text-muted transition-colors hover:text-accent"
             >
               <Linkedin className="h-6 w-6" />
             </a>

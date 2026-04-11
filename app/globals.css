@@ -1,14 +1,15 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #1c1410;
-  --color-foreground: #f3ede3;
-  --color-muted: #b8a99a;
-  --color-accent: #6b2737;
-  --color-accent-muted: rgba(107, 39, 55, 0.14);
-  --color-card-hover: rgba(243, 237, 227, 0.05);
-  --color-card-border: rgba(243, 237, 227, 0.12);
-  --color-tag-bg: rgba(107, 39, 55, 0.18);
+  --color-background: #01061c;
+  --color-foreground: #f2ede4;
+  --color-accent: #f2ede4;
+  /* Matches foreground; nav inactive rail uses bg-accent/35 not bg-muted */
+  --color-muted: #f2ede4;
+  --color-accent-muted: rgba(242, 237, 228, 0.12);
+  --color-card-hover: rgba(242, 237, 228, 0.06);
+  --color-card-border: rgba(242, 237, 228, 0.14);
+  --color-tag-bg: rgba(242, 237, 228, 0.14);
 
   --font-sans: var(--font-eb-garamond), "EB Garamond", ui-serif, Georgia, "Times New Roman", serif;
 }
@@ -24,6 +25,6 @@ body {
 }
 
 ::selection {
-  background-color: rgba(107, 39, 55, 0.45);
-  color: var(--color-foreground);
+  background-color: rgba(242, 237, 228, 0.22);
+  color: var(--color-background);
 }

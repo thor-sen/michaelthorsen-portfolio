@@ -57,7 +57,7 @@ function GTMFeaturedProject() {
       </div>
 
       {/* Title and Description */}
-      <h3 className="text-xl font-semibold text-foreground mb-3">
+      <h3 className="text-xl font-semibold text-accent mb-3">
         Automated Lead Scoring and Outreach Engine
       </h3>
       <p className="text-muted leading-relaxed mb-8 max-w-3xl">
@@ -73,7 +73,7 @@ function GTMFeaturedProject() {
             key={card.title}
             className="p-4 rounded-md border border-card-border bg-background/30 hover:border-muted/50 transition-colors"
           >
-            <h4 className="text-sm font-medium text-foreground mb-1">{card.title}</h4>
+            <h4 className="text-sm font-medium text-accent mb-1">{card.title}</h4>
             <p className="text-xs text-muted leading-relaxed">{card.description}</p>
           </div>
         ))}
@@ -84,7 +84,7 @@ function GTMFeaturedProject() {
         {gtmTechStack.map((tech) => (
           <span
             key={tech}
-            className="px-3 py-1 rounded-full bg-tag-bg text-xs font-medium text-accent"
+            className="px-3 py-1 rounded-full bg-tag-bg text-xs font-medium text-foreground"
           >
             {tech}
           </span>
@@ -97,14 +97,14 @@ function GTMFeaturedProject() {
           href="https://github.com/thor-sen/gtm-automation-engine"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-accent/10 text-accent text-sm font-medium hover:bg-accent/20 transition-colors"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-card-border text-accent text-sm font-medium hover:bg-card-hover transition-colors"
         >
           <Github className="h-4 w-4" />
           View on GitHub
         </a>
         <Link
           href="/projects/gtm-system"
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-card-border text-foreground text-sm font-medium hover:bg-card-hover hover:border-muted/50 transition-colors"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-card-border text-accent text-sm font-medium hover:bg-card-hover hover:border-muted/50 transition-colors"
         >
           <FileText className="h-4 w-4" />
           Read Writeup
@@ -117,9 +117,9 @@ function GTMFeaturedProject() {
 function SimpleProjectCard() {
   return (
     <div className="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
-      <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-card-hover lg:group-hover:shadow-[inset_0_1px_0_0_rgba(243,237,227,0.1)] lg:group-hover:drop-shadow-lg" />
+      <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-card-hover lg:group-hover:shadow-[inset_0_1px_0_0_rgba(242,237,228,0.1)] lg:group-hover:drop-shadow-lg" />
       <div className="z-10 sm:order-2 sm:col-span-6">
-        <h3 className="text-base font-medium leading-snug text-foreground group-hover:text-accent">
+        <h3 className="text-base font-medium leading-snug text-accent group-hover:text-muted">
           AI Sales Call Scorer
         </h3>
         <p className="mt-2 text-sm leading-normal text-muted">
@@ -130,7 +130,7 @@ function SimpleProjectCard() {
         <ul className="mt-2 flex flex-wrap" aria-label="Technologies used">
           {["Python", "Claude API", "JSON"].map((tech) => (
             <li key={tech} className="mr-1.5 mt-2">
-              <div className="flex items-center rounded-full bg-tag-bg px-3 py-1 text-xs font-medium leading-5 text-accent">
+              <div className="flex items-center rounded-full bg-tag-bg px-3 py-1 text-xs font-medium leading-5 text-foreground">
                 {tech}
               </div>
             </li>
@@ -140,7 +140,7 @@ function SimpleProjectCard() {
           href="https://github.com/thor-sen/ai-sales-call-scorer"
           target="_blank"
           rel="noopener noreferrer"
-          className="relative z-20 mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-md bg-accent/10 text-accent text-sm font-medium hover:bg-accent/20 transition-colors"
+          className="relative z-20 mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-md border border-card-border text-accent text-sm font-medium hover:bg-card-hover transition-colors"
         >
           <Github className="h-4 w-4" />
           View on GitHub
@@ -161,7 +161,7 @@ export function ProjectsSection() {
       aria-label="Selected projects"
     >
       <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-background/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
-        <h2 className="text-sm font-bold uppercase tracking-widest text-foreground lg:sr-only">
+        <h2 className="text-sm font-bold uppercase tracking-widest text-accent lg:sr-only">
           Projects
         </h2>
       </div>

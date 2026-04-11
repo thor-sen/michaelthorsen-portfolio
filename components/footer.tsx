@@ -7,7 +7,7 @@ export function Footer() {
           href="https://nextjs.org"
           target="_blank"
           rel="noopener noreferrer"
-          className="font-medium text-foreground hover:text-accent transition-colors"
+          className="font-medium text-accent hover:text-muted transition-colors"
         >
           Next.js
         </a>{" "}
@@ -16,7 +16,7 @@ export function Footer() {
           href="https://tailwindcss.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="font-medium text-foreground hover:text-accent transition-colors"
+          className="font-medium text-accent hover:text-muted transition-colors"
         >
           Tailwind CSS
         </a>
@@ -25,7 +25,7 @@ export function Footer() {
           href="https://vercel.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="font-medium text-foreground hover:text-accent transition-colors"
+          className="font-medium text-accent hover:text-muted transition-colors"
         >
           Vercel
         </a>
