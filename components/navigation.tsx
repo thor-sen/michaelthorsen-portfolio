@@ -42,25 +42,20 @@ export function Navigation() {
   };
 
   return (
-    <nav className="hidden lg:flex flex-col gap-4">
+    <nav className="flex items-center justify-center gap-8">
       {navItems.map(({ id, label }) => {
         const isActive = activeSection === id;
         return (
           <button
             key={id}
             onClick={() => handleClick(id)}
-            className="group flex items-center gap-4 text-left"
+            className={`text-xs font-bold tracking-widest transition-colors duration-300 ${
+              isActive
+                ? "text-accent"
+                : "text-muted hover:text-foreground"
+            }`}
           >
-            <span
-              className={`h-px transition-all duration-300 ${
-                isActive
-                  ? "w-16 bg-accent"
-                  : "w-8 bg-accent/35 group-hover:w-16 group-hover:bg-accent"
-              }`}
-            />
-            <span className="text-xs font-bold tracking-widest text-foreground transition-opacity duration-300 group-hover:opacity-90">
-              {label}
-            </span>
+            {label}
           </button>
         );
       })}
