@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { EB_Garamond } from "next/font/google";
+import { CursorSpotlight } from "@/components/cursor-spotlight";
 import "./globals.css";
 
 const ebGaramond = EB_Garamond({
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#01061c",
+  themeColor: "#120c08",
   width: "device-width",
   initialScale: 1,
 };
@@ -32,7 +33,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={ebGaramond.variable}>
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased">
+        {children}
+        <CursorSpotlight />
+      </body>
     </html>
   );
 }

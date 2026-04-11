@@ -11,7 +11,21 @@ export const metadata: Metadata = {
 
 export default function GTMSystemPage() {
   return (
-    <div className="relative min-h-screen bg-background">
+    <div
+      className="relative min-h-screen"
+      style={{
+        ["--color-background" as string]: "#f2ede4",
+        ["--color-foreground" as string]: "#120c08",
+        ["--color-muted" as string]: "#4a4a4a",
+        ["--color-accent" as string]: "#120c08",
+        ["--color-accent-muted" as string]: "rgba(18, 12, 8, 0.12)",
+        ["--color-card-hover" as string]: "rgba(18, 12, 8, 0.05)",
+        ["--color-card-border" as string]: "rgba(18, 12, 8, 0.14)",
+        ["--color-tag-bg" as string]: "rgba(18, 12, 8, 0.08)",
+        backgroundColor: "#f2ede4",
+        color: "#120c08",
+      }}
+    >
       <div className="mx-auto max-w-3xl px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-24">
         <Link
           href="/"
@@ -34,7 +48,7 @@ export default function GTMSystemPage() {
             </video>
           </div>
 
-          <h1 className="mb-6 text-4xl font-bold tracking-tight text-accent sm:text-5xl">
+          <h1 className="mb-6 text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
             Automated Lead Scoring and Outreach Engine
           </h1>
 
@@ -141,14 +155,14 @@ export default function GTMSystemPage() {
           <section className="mb-12" aria-labelledby="design-decisions-heading">
             <h2
               id="design-decisions-heading"
-              className="mb-8 text-2xl font-bold tracking-tight text-accent"
+              className="mb-8 text-2xl font-bold tracking-tight text-foreground"
             >
               Key Design Decisions
             </h2>
 
             <div className="space-y-10">
               <div>
-                <h3 className="mb-3 text-base font-semibold text-accent">
+                <h3 className="mb-3 text-base font-semibold text-foreground">
                   Firmographic data drives half the score — and that&apos;s intentional.
                 </h3>
                 <p className="text-muted leading-relaxed">
@@ -163,7 +177,7 @@ export default function GTMSystemPage() {
               </div>
 
               <div>
-                <h3 className="mb-3 text-base font-semibold text-accent">
+                <h3 className="mb-3 text-base font-semibold text-foreground">
                   Territory routing follows fixed rules, not load balancing.
                 </h3>
                 <p className="text-muted leading-relaxed">
@@ -179,7 +193,7 @@ export default function GTMSystemPage() {
               </div>
 
               <div>
-                <h3 className="mb-3 text-base font-semibold text-accent">
+                <h3 className="mb-3 text-base font-semibold text-foreground">
                   HubSpot is the only source of truth.
                 </h3>
                 <p className="text-muted leading-relaxed">

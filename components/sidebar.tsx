@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Github, Linkedin, ArrowUpRight } from "lucide-react";
 import { Navigation } from "./navigation";
+import { ThorNameHeading } from "./thor-name-heading";
 
 export function Sidebar() {
   return (
@@ -15,10 +16,8 @@ export function Sidebar() {
           priority
           unoptimized
         />
-        <h1 className="text-4xl font-bold tracking-tight text-accent sm:text-5xl">
-          Michael Thorsen
-        </h1>
-        <h2 className="mt-3 text-lg font-medium tracking-tight text-accent sm:text-xl">
+        <ThorNameHeading />
+        <h2 className="mt-3 text-lg font-medium tracking-tight text-foreground sm:text-xl">
           GTM Operator
         </h2>
         <p className="mt-4 max-w-xs leading-normal text-muted">
@@ -45,7 +44,7 @@ export function Sidebar() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
-              className="text-muted transition-colors hover:text-accent"
+              className="text-foreground transition-opacity hover:opacity-80"
             >
               <Github className="h-6 w-6" />
             </a>
@@ -56,7 +55,7 @@ export function Sidebar() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
-              className="text-muted transition-colors hover:text-accent"
+              className="text-foreground transition-opacity hover:opacity-80"
             >
               <Linkedin className="h-6 w-6" />
             </a>
