@@ -9,9 +9,10 @@ export function Sidebar() {
       <Image
         src="/headshot.jpeg"
         alt="Michael Thorsen"
-        width={120}
-        height={120}
-        className="mb-6 h-[120px] w-[120px] rounded-full object-cover"
+        width={160}
+        height={160}
+        sizes="160px"
+        className="mb-6 size-[160px] rounded-full object-cover"
         priority
         unoptimized
       />
