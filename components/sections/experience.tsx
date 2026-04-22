@@ -73,7 +73,7 @@ export function ExperienceSection() {
   return (
     <section
       id="experience"
-      className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36"
+      className="mb-[38px] scroll-mt-16 md:mb-[58px] lg:mb-[86px]"
       aria-label="Work experience"
     >
       <div className="sticky top-0 z-20 -mx-6 mb-4 bg-background/75 px-6 py-5 backdrop-blur">
@@ -89,17 +89,6 @@ export function ExperienceSection() {
             </li>
           ))}
         </ol>
-        <div className="mt-12">
-          <a
-            href="/resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group inline-flex items-center gap-1 text-sm font-medium text-accent hover:text-muted transition-colors"
-          >
-            View Full Resume
-            <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-          </a>
-        </div>
       </div>
     </section>
   );

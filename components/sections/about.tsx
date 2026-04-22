@@ -2,7 +2,7 @@ export function AboutSection() {
   return (
     <section
       id="about"
-      className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36"
+      className="mb-[38px] scroll-mt-16 md:mb-[58px] lg:mb-[86px]"
       aria-label="About me"
     >
       <div className="sticky top-0 z-20 -mx-6 mb-4 bg-background/75 px-6 py-5 backdrop-blur">
