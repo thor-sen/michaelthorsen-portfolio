@@ -6,16 +6,18 @@ import { ThorNameHeading } from "./thor-name-heading";
 export function Sidebar() {
   return (
     <header className="flex flex-col items-center text-center pb-12 mb-12 border-b border-card-border">
-      <Image
-        src="/headshot.jpeg"
-        alt="Michael Thorsen"
-        width={160}
-        height={160}
-        sizes="160px"
-        className="mb-6 size-[160px] rounded-full object-cover"
-        priority
-        unoptimized
-      />
+      <div className="mb-6 size-[160px] overflow-hidden rounded-full">
+        <Image
+          src="/headshot.jpeg"
+          alt="Michael Thorsen"
+          width={240}
+          height={240}
+          sizes="240px"
+          className="h-full w-full scale-[1.35] object-cover object-[center_22%]"
+          priority
+          unoptimized
+        />
+      </div>
       <ThorNameHeading />
       <h2 className="mt-3 text-lg font-medium tracking-tight text-foreground sm:text-xl">
         GTM Operator
