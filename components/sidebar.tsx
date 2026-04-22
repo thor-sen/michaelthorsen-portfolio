@@ -5,7 +5,7 @@ import { ThorNameHeading } from "./thor-name-heading";
 
 export function Sidebar() {
   return (
-    <header className="flex flex-col items-center text-center pb-12 mb-12 border-b border-card-border">
+    <header className="flex flex-col items-center text-center pb-12 mb-5 border-b border-card-border">
       <div className="mb-[19px] size-[160px] overflow-hidden rounded-full">
         <Image
           src="/headshot.jpeg"
