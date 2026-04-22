@@ -72,42 +72,32 @@ export default function GTMSystemPage() {
 
           <div className="mb-12 space-y-4 text-muted leading-relaxed">
             <p>
-              I built a GTM automation system that takes a company from &quot;just entered our
-              CRM&quot; to &quot;personalized outreach in the rep&apos;s queue&quot; without anyone
-              touching it manually.
+              The system is designed simply to get the right company in front of the right rep with
+              the right message. It takes a company from &quot;just entered CRM&quot; to
+              &quot;personalized outreach in the rep&apos;s task queue&quot; without any manual work.
             </p>
             <p>
-              It starts with a live connection to HubSpot that keeps our data fresh. The moment a
-              company enters the system, it automatically gets enriched — we pull in firmographic
-              data like headcount, revenue, industry, and tech stack from People Data Labs so
-              we&apos;re not working with a half-empty record.
+              The moment a company enters Hubspot, it automatically gets enriched with firmographic
+              data like headcount, revenue, industry, and tech stack from People Data Labs.
             </p>
             <p>
-              From there, a machine learning model scores each company on ICP fit — basically asking
-              &quot;how closely does this company match our ideal customer?&quot; — and returns a
-              score from 0 to 100. That score gets combined with two other signals: how much the
-              company has engaged with us, and whether they&apos;ve shown signs of having the problem
-              we solve. The result is a single composite priority score that determines which tier
-              each company falls into. Everything writes back to HubSpot automatically.
+              From there, a webhook fires and routes it to the right rep instantly based on geography
+              and company size.
             </p>
             <p>
-              When a new company is created, a webhook fires and routes it to the right rep
-              instantly based on geography and company size. No spreadsheet, no Slack message, no
-              manual assignment.
+              A machine learning model scores each company on ICP fit and returns a score from 0 to
+              100. That score gets combined with two other signals: past engagement, and pain. The
+              result is a single composite priority score that determines which tier each company
+              falls into. Everything writes back to HubSpot automatically.
             </p>
             <p>
-              The AI layer sits on top of all of this. It reads each company&apos;s scores and
-              signals, classifies ICP fit, detects intent, and generates personalized outreach for
-              the BDR team using Claude. The output isn&apos;t a template — it&apos;s informed by what
-              we actually know about each company.
+              An AI layer sits on top of all of this to read the company&apos;s scores and signals,
+              classify ICP fit, detect intent, and generate personalized outreach for the account
+              owner BDR.
             </p>
             <p>
-              A Streamlit dashboard ties it together — pipeline health, scoring breakdowns, routing
-              audit trails — so the team always knows what the system is doing and why.
-            </p>
-            <p>
-              The whole thing is designed around one principle: get the right company in front of the
-              right rep with the right message before a human has to think about it.
+              The Streamlit dashboard ties it together: pipeline health, scoring breakdowns, routing
+              audit trails. The team always knows what the system is doing and why.
             </p>
           </div>
 
@@ -132,13 +122,13 @@ export default function GTMSystemPage() {
             <div className="space-y-10">
               <div>
                 <h3 className="mb-3 text-base font-semibold text-foreground">
-                  Firmographic data drives half the score — and that&apos;s intentional.
+                  Firmographic data drives half the score, and that&apos;s intentional.
                 </h3>
                 <p className="text-muted leading-relaxed">
                   In healthcare, certain things are either true or they&apos;re not. A company either
                   has the headcount, the revenue, and the Medicare participation to be a real
                   customer. No amount of engagement changes that. So I weighted firmographic fit at
-                  50% — it&apos;s the floor, not a tiebreaker. Engagement and urgency signals split
+                  50%. It&apos;s the floor, not a tiebreaker. Engagement and urgency signals split
                   the other 50% because they tell you when to reach out, not whether to. A
                   perfect-fit company that hasn&apos;t engaged yet still surfaces as a priority. A
                   poor-fit company that&apos;s been clicking around doesn&apos;t jump the queue.
@@ -151,13 +141,13 @@ export default function GTMSystemPage() {
                 </h3>
                 <p className="text-muted leading-relaxed">
                   I could have built a system that evenly distributes leads across reps automatically.
-                  I didn&apos;t, and it was a deliberate call. Fixed rules — region and company size
-                  determine which rep gets which company — mean every routing decision is explainable.
-                  You can look at any company in the CRM and know exactly why it went where it went
-                  without digging through server logs. The tradeoff is that if territories get
-                  unbalanced, someone has to update the rules manually rather than letting the system
-                  self-correct. For a sales team where rep accountability and transparency matter,
-                  that&apos;s worth it.
+                  I didn&apos;t, and it was a deliberate call. Fixed rules, where region and company
+                  size determine which rep gets which company, mean every routing decision is
+                  explainable. You can look at any company in the CRM and know exactly why it went
+                  where it went without digging through server logs. The tradeoff is that if
+                  territories get unbalanced, someone has to update the rules manually rather than
+                  letting the system self-correct. For a sales team where rep accountability and
+                  transparency matter, that&apos;s worth it.
                 </p>
               </div>
 
@@ -166,25 +156,25 @@ export default function GTMSystemPage() {
                   HubSpot is the only source of truth.
                 </h3>
                 <p className="text-muted leading-relaxed">
-                  Every component in the system reads from HubSpot and writes back to HubSpot —
-                  nothing passes data to the next stage through local files or a shared database.
+                  Every component in the system reads from HubSpot and writes back to HubSpot.
+                  Nothing passes data to the next stage through local files or a shared database.
                   This means if one part of the pipeline goes down, the rest keep running. It means
                   every intermediate result shows up in CRM in real time, not just at the end. And
                   it means anyone on the team can see exactly what the system did and when. The cost
                   is more API calls and more attention to rate limits. The benefit is a system that
-                  produces real, visible CRM changes at every step — which matters when you&apos;re
+                  produces real, visible CRM changes at every step, which matters when you&apos;re
                   asking a sales team to trust something they didn&apos;t build.
                 </p>
               </div>
             </div>
           </section>
 
-          <section className="mb-12" aria-labelledby="honest-framing-heading">
+          <section className="mb-12" aria-labelledby="whats-stubbed-heading">
             <h2
-              id="honest-framing-heading"
+              id="whats-stubbed-heading"
               className="mb-8 text-2xl font-bold tracking-tight text-foreground"
             >
-              Honest framing: what&apos;s real and what&apos;s stubbed
+              What&apos;s stubbed
             </h2>
 
             <div className="space-y-4 text-muted leading-relaxed">
@@ -201,20 +191,20 @@ export default function GTMSystemPage() {
                 automatically. The integration point is already there.
               </p>
               <p>
-                The pain signal detector uses mocked news data — realistic healthcare articles mapped to
-                known companies — rather than a live news feed. Everything downstream of that is real:
-                the Claude classification, the gating logic, the outreach generation all run against
-                real CRM fields. In production you&apos;d connect a live news API or an intent data
-                provider like Bombora at the same integration point.
+                The pain signal detector uses mocked news data (realistic healthcare articles mapped
+                to known companies) rather than a live news feed. Everything downstream of that is
+                real: the Claude classification, the gating logic, the outreach generation all run
+                against real CRM fields. In production you&apos;d connect a live news API or an
+                intent data provider like Bombora at the same integration point.
               </p>
               <p>
-                The design philosophy was to build every integration point as if it were production and
-                stub only the data sources that require funded third-party accounts to demo.
+                The design philosophy was to build every integration point as if it were production
+                and stub only the data sources that require funded third-party accounts to demo.
               </p>
               <p>
                 If I were taking this or something similar live I would also have included a feedback
-                loop that retrains the scoring model on closed-won data over time, and a sequence layer
-                that tracks outreach responses and adjusts follow-up cadence automatically.
+                loop that retrains the scoring model on closed-won data over time, and a sequence
+                layer that tracks outreach responses and adjusts follow-up cadence automatically.
               </p>
             </div>
           </section>
