@@ -6,7 +6,7 @@ import { ThorNameHeading } from "./thor-name-heading";
 export function Sidebar() {
   return (
     <header className="flex flex-col items-center text-center pb-12 mb-12 border-b border-card-border">
-      <div className="mb-6 size-[160px] overflow-hidden rounded-full">
+      <div className="mb-[19px] size-[160px] overflow-hidden rounded-full">
         <Image
           src="/headshot.jpeg"
           alt="Michael Thorsen"
@@ -19,13 +19,13 @@ export function Sidebar() {
         />
       </div>
       <ThorNameHeading />
-      <h2 className="mt-3 text-lg font-medium tracking-tight text-foreground sm:text-xl">
+      <h2 className="mt-[10px] text-lg font-medium tracking-tight text-foreground sm:text-xl">
         GTM Operator
       </h2>
-      <p className="mt-4 max-w-xs leading-normal text-muted">
+      <p className="mt-[13px] max-w-xs leading-normal text-muted">
         I build revenue systems and the teams to run them.
       </p>
-      <div className="mt-8">
+      <div className="mt-[26px]">
         <Navigation />
       </div>
       <div className="mt-8 flex items-center justify-center gap-5">

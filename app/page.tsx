@@ -7,7 +7,7 @@ import { Footer } from "@/components/footer";
 export default function Home() {
   return (
     <div className="relative min-h-screen bg-background">
-      <div className="mx-auto min-h-screen max-w-[680px] px-6 py-12 md:py-20">
+      <div className="mx-auto min-h-screen max-w-[680px] px-6 pt-[29px] pb-12 md:pt-12 md:pb-20">
         <Sidebar />
         <main id="content">
           <AboutSection />
