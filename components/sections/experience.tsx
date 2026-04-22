@@ -12,7 +12,7 @@ interface Experience {
 const experiences: Experience[] = [
   {
     dateRange: "2022 — 2025",
-    title: "Partnerships Lead",
+    title: "Growth Lead",
     company: "Chapter",
     companyUrl: "https://www.businesswire.com/news/home/20260409159904/en/Chapter-Raises-%24100-Million-Series-E-to-Continue-Building-the-Trust-Layer-Between-Seniors-and-Technology-in-the-Age-of-AI",
     description:
