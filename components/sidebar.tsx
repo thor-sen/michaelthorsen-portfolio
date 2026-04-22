@@ -13,7 +13,7 @@ export function Sidebar() {
           width={240}
           height={240}
           sizes="240px"
-          className="h-full w-full scale-[1.35] object-cover object-[center_22%]"
+          className="h-full w-full scale-[1.6] object-cover object-[center_22%]"
           priority
           unoptimized
         />
