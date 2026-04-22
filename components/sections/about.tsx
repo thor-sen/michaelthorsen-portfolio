@@ -15,17 +15,16 @@ export function AboutSection() {
           I&apos;m a GTM operator with a track record of building revenue systems
           from scratch. I believe the future of the go-to-market space belongs to
           technical generalists with earned sales intuition and a love for
-          building systems in messy spaces.
+          designing systems in messy spaces.
         </p>
         <p>
           I spent the last three and a half years at Chapter, a Medicare guidance
-          startup, where I built the partnerships function from the ground up.
+          startup, where I built the outbound motion, BDR team, and RevOps
+          infrastructure that scaled partnerships across multiple verticals.
           During that time, Chapter raised from series B to series D and grew 10x.
         </p>
         <p>
-          Before that I was a financial advisor at a small RIA in Boston, where I
-          built my book of business from scratch and became the firm&apos;s go-to
-          person for cold calling tactics within 5 months.
+          Before that I was a financial advisor at a small RIA in Boston.
         </p>
         <p>
           I took the past few months off to surf, summit volcanoes, write, and
