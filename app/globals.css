@@ -15,11 +15,15 @@
 
 html {
   scroll-behavior: smooth;
-  cursor: none;
 }
 
-a, button, [role="button"], input, select, textarea, label {
-  cursor: none;
+@media (hover: hover) and (pointer: fine) {
+  html {
+    cursor: none;
+  }
+  a, button, [role="button"], input, select, textarea, label {
+    cursor: none;
+  }
 }
 
 body {

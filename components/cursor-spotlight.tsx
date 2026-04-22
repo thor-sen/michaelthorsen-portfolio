@@ -87,6 +87,13 @@ export function CursorSpotlight() {
     const canvas = canvasRef.current;
     const dot = dotRef.current;
     if (!canvas || !dot) return;
+    const hasFinePointer =
+      window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+    if (!hasFinePointer) {
+      canvas.style.display = "none";
+      dot.style.display = "none";
+      return;
+    }
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
     const s = stateRef.current;

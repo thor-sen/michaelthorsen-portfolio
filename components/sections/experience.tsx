@@ -14,7 +14,7 @@ const experiences: Experience[] = [
     dateRange: "2022 — 2025",
     title: "Partnerships Lead",
     company: "Chapter",
-    companyUrl: "https://askchapter.org/",
+    companyUrl: "https://www.businesswire.com/news/home/20260409159904/en/Chapter-Raises-%24100-Million-Series-E-to-Continue-Building-the-Trust-Layer-Between-Seniors-and-Technology-in-the-Age-of-AI",
     description:
       "Led GTM strategy across all partnership verticals, scaling from a solo role to a team of three. Selected and deployed the full GTM tech stack and owned RevOps infrastructure end to end. Built the outbound engine responsible for roughly 80% of Chapter's revenue as the company grew from Series B to Series D.",
   },
@@ -44,12 +44,12 @@ function ExperienceCard({ experience }: { experience: Experience }) {
               href={experience.companyUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="group/link inline-flex items-baseline text-base font-medium leading-tight text-foreground underline-offset-4 hover:underline hover:text-accent focus-visible:underline transition-colors"
+              className="group/link inline-flex items-baseline text-base font-medium leading-tight text-foreground group-hover:text-accent transition-colors"
             >
               <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block" />
               <span>
                 {experience.title} ·{" "}
-                <span className="inline-block">
+                <span className="inline-block underline-offset-4 group-hover/link:underline group-focus-visible/link:underline">
                   {experience.company}
                   <ArrowUpRight className="ml-1 inline-block h-4 w-4 shrink-0 translate-y-px transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none" />
                 </span>
