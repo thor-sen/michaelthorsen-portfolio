@@ -53,9 +53,9 @@ export default function GTMSystemPage() {
           </h1>
 
           <p className="mb-8 text-muted leading-relaxed">
-            A production-grade system that automatically enriches, scores, routes, and generates
-            outreach for companies in a live HubSpot CRM. Built on real company data (health systems)
-            across 7 interconnected components.
+            An automated pipeline that enriches, scores, routes, and generates personalized outreach
+            for companies in a live HubSpot CRM. Runs on real data across 200+ health system
+            companies.
           </p>
 
           <div className="mb-12">
@@ -72,47 +72,6 @@ export default function GTMSystemPage() {
 
           <div className="mb-12 space-y-4 text-muted leading-relaxed">
             <p>
-              The core system is fully live against a real HubSpot portal with real company data.
-              The CRM connector, territory router, composite scorer, ML model, and dashboard all run
-              against production CRM records.
-            </p>
-            <p>Two areas are partially stubbed.</p>
-            <p>
-              Lead enrichment is fully built but without a People Data Labs account. Without a valid
-              API key, companies get marked as failed and the pipeline moves on gracefully. In
-              production you would need to swap in the key and for enrichment to populate
-              automatically. The integration point is already there.
-            </p>
-            <p>
-              The pain signal detector uses mocked news data — realistic healthcare articles mapped to
-              known companies — rather than a live news feed. Everything downstream of that is real:
-              the Claude classification, the gating logic, the outreach generation all run against
-              real CRM fields. In production you&apos;d connect a live news API or an intent data
-              provider like Bombora at the same integration point.
-            </p>
-            <p>
-              The design philosophy was to build every integration point as if it were production and
-              stub only the data sources that require funded third-party accounts to demo.
-            </p>
-            <p>
-              If I were taking this or something similar live I would also have included a feedback
-              loop that retrains the scoring model on closed-won data over time, and a sequence layer
-              that tracks outreach responses and adjusts follow-up cadence automatically.
-            </p>
-          </div>
-
-          <div className="mb-12 overflow-hidden rounded-lg border border-card-border bg-card-hover/30 p-4">
-            <Image
-              src="/gtm-pipeline-flow.svg"
-              alt="Diagram of HubSpot CRM data flowing through enrichment, ML scoring, composite scoring, territory routing, AI outreach, and the intelligence dashboard"
-              width={1200}
-              height={600}
-              className="h-auto w-full"
-            />
-          </div>
-
-          <div className="mb-12 space-y-4 text-muted leading-relaxed">
-            <p>
               I built a GTM automation system that takes a company from &quot;just entered our
               CRM&quot; to &quot;personalized outreach in the rep&apos;s queue&quot; without anyone
               touching it manually.
@@ -120,7 +79,7 @@ export default function GTMSystemPage() {
             <p>
               It starts with a live connection to HubSpot that keeps our data fresh. The moment a
               company enters the system, it automatically gets enriched — we pull in firmographic
-              data like headcount, revenue, industry, and tech stack from an external API so
+              data like headcount, revenue, industry, and tech stack from People Data Labs so
               we&apos;re not working with a half-empty record.
             </p>
             <p>
@@ -150,6 +109,16 @@ export default function GTMSystemPage() {
               The whole thing is designed around one principle: get the right company in front of the
               right rep with the right message before a human has to think about it.
             </p>
+          </div>
+
+          <div className="mb-12 overflow-hidden rounded-lg border border-card-border bg-card-hover/30 p-4">
+            <Image
+              src="/gtm-pipeline-flow.svg"
+              alt="Diagram of HubSpot CRM data flowing through enrichment, ML scoring, composite scoring, territory routing, AI outreach, and the intelligence dashboard"
+              width={1200}
+              height={600}
+              className="h-auto w-full"
+            />
           </div>
 
           <section className="mb-12" aria-labelledby="design-decisions-heading">
@@ -207,6 +176,46 @@ export default function GTMSystemPage() {
                   asking a sales team to trust something they didn&apos;t build.
                 </p>
               </div>
+            </div>
+          </section>
+
+          <section className="mb-12" aria-labelledby="honest-framing-heading">
+            <h2
+              id="honest-framing-heading"
+              className="mb-8 text-2xl font-bold tracking-tight text-foreground"
+            >
+              Honest framing: what&apos;s real and what&apos;s stubbed
+            </h2>
+
+            <div className="space-y-4 text-muted leading-relaxed">
+              <p>
+                The core system is fully live against a real HubSpot portal with real company data.
+                The CRM connector, territory router, composite scorer, ML model, and dashboard all run
+                against production CRM records.
+              </p>
+              <p>Two areas are partially stubbed.</p>
+              <p>
+                Lead enrichment is fully built but without a People Data Labs account. Without a valid
+                API key, companies get marked as failed and the pipeline moves on gracefully. In
+                production you would need to swap in the key and for enrichment to populate
+                automatically. The integration point is already there.
+              </p>
+              <p>
+                The pain signal detector uses mocked news data — realistic healthcare articles mapped to
+                known companies — rather than a live news feed. Everything downstream of that is real:
+                the Claude classification, the gating logic, the outreach generation all run against
+                real CRM fields. In production you&apos;d connect a live news API or an intent data
+                provider like Bombora at the same integration point.
+              </p>
+              <p>
+                The design philosophy was to build every integration point as if it were production and
+                stub only the data sources that require funded third-party accounts to demo.
+              </p>
+              <p>
+                If I were taking this or something similar live I would also have included a feedback
+                loop that retrains the scoring model on closed-won data over time, and a sequence layer
+                that tracks outreach responses and adjusts follow-up cadence automatically.
+              </p>
             </div>
           </section>
         </article>
