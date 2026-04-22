@@ -115,7 +115,7 @@ function GTMFeaturedProject() {
       {/* Buttons */}
       <div className="relative z-10 flex flex-wrap gap-3">
         <a
-          href="https://github.com/thor-sen/gtm-automation-engine"
+          href="https://github.com/thor-sen/automated-lead-scoring-and-outreach-engine"
           target="_blank"
           rel="noopener noreferrer"
           className="relative z-20 inline-flex items-center gap-2 px-4 py-2 rounded-md border border-card-border text-accent text-sm font-medium hover:bg-card-hover transition-colors"

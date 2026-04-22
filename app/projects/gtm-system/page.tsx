@@ -60,7 +60,7 @@ export default function GTMSystemPage() {
 
           <div className="mb-12">
             <a
-              href="https://github.com/thor-sen/gtm-automation-engine"
+              href="https://github.com/thor-sen/automated-lead-scoring-and-outreach-engine"
               target="_blank"
               rel="noopener noreferrer"
               className="group inline-flex items-center gap-2 rounded-lg border border-card-border px-6 py-3 text-sm font-medium text-accent transition-colors hover:bg-card-hover"
