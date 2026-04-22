@@ -23,7 +23,7 @@ const experiences: Experience[] = [
     title: "Financial Advisor",
     company: "McAdam Financial",
     description:
-      "Built a financial advisory book of business from scratch with 100% client retention. Selected within the first five months to teach client acquisition tactics company-wide based on conversion ratio.",
+      "Built a financial advisory book of business from scratch with 100% client retention. Selected within the first three months to teach client acquisition tactics company-wide based on conversion ratio.",
   },
 ];
 
