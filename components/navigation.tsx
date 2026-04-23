@@ -1,17 +1,26 @@
 "use client";
 
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
-const navItems = [
-  { id: "about", label: "ABOUT" },
-  { id: "experience", label: "EXPERIENCE" },
-  { id: "projects", label: "PROJECTS" },
-];
+const sectionNavItems = [
+  { id: "about", label: "ABOUT", href: "/#about" as const },
+  { id: "experience", label: "EXPERIENCE", href: "/#experience" as const },
+  { id: "projects", label: "PROJECTS", href: "/#projects" as const },
+] as const;
+
+const scheduleNavItem = { id: "schedule", label: "SCHEDULE", href: "/schedule" as const };
+
+const navItems = [...sectionNavItems, scheduleNavItem];
 
 export function Navigation() {
-  const [activeSection, setActiveSection] = useState("about");
+  const pathname = usePathname();
+  const [activeSection, setActiveSection] = useState<string>("about");
 
   useEffect(() => {
+    if (pathname !== "/") return;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -26,37 +35,35 @@ export function Navigation() {
       }
     );
 
-    navItems.forEach(({ id }) => {
+    sectionNavItems.forEach(({ id }) => {
       const element = document.getElementById(id);
       if (element) observer.observe(element);
     });
 
     return () => observer.disconnect();
-  }, []);
+  }, [pathname]);
 
-  const handleClick = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+  const isActive = (id: string) => {
+    if (pathname === "/schedule") return id === "schedule";
+    if (pathname !== "/") return false;
+    if (id === "schedule") return false;
+    return activeSection === id;
   };
 
   return (
-    <nav className="flex items-center justify-center gap-8">
-      {navItems.map(({ id, label }) => {
-        const isActive = activeSection === id;
+    <nav className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 sm:gap-x-8">
+      {navItems.map(({ id, label, href }) => {
+        const active = isActive(id);
         return (
-          <button
+          <Link
             key={id}
-            onClick={() => handleClick(id)}
+            href={href}
             className={`text-xs font-bold tracking-widest transition-colors duration-300 ${
-              isActive
-                ? "text-accent"
-                : "text-muted hover:text-foreground"
+              active ? "text-accent" : "text-muted hover:text-foreground"
             }`}
           >
             {label}
-          </button>
+          </Link>
         );
       })}
     </nav>
