@@ -12,7 +12,7 @@ export default function SchedulePage() {
   return (
     <div className="relative bg-background">
       <div className="mx-auto flex min-h-screen w-full max-w-[680px] flex-col px-6 pt-[29px] pb-12 md:pt-12 md:pb-20">
-        <Sidebar />
+        <Sidebar showPhotoRing />
         <main
           id="content"
           className="flex min-h-0 flex-1 flex-col text-foreground"
