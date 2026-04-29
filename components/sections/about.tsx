@@ -13,9 +13,7 @@ export function AboutSection() {
       <div className="space-y-4 text-muted font-normal">
         <p>
           I&apos;m a GTM operator with a track record of building revenue systems
-          from scratch. I believe the future of the go-to-market space belongs to
-          technical generalists with earned sales intuition and a love for
-          designing systems in messy spaces.
+          from scratch.
         </p>
         <p>
           I spent the last three and a half years at Chapter, a Medicare guidance

@@ -3,17 +3,25 @@ import { Github, Linkedin, ArrowUpRight } from "lucide-react";
 import { Navigation } from "./navigation";
 import { ThorNameHeading } from "./thor-name-heading";
 
-export function Sidebar() {
+type SidebarProps = {
+  showPhotoRing?: boolean;
+};
+
+export function Sidebar({ showPhotoRing = false }: SidebarProps) {
   return (
     <header className="flex flex-col items-center text-center pb-12 mb-5 border-b border-card-border">
-      <div className="mb-[19px] size-[160px] overflow-hidden rounded-full">
+      <div
+        className={`mb-[19px] size-[160px] overflow-hidden rounded-full ${
+          showPhotoRing ? "border border-white/10" : ""
+        }`}
+      >
         <Image
-          src="/headshot.jpeg"
+          src="/headshot.png"
           alt="Michael Thorsen"
           width={240}
           height={240}
           sizes="240px"
-          className="h-full w-full scale-[1.6] object-cover object-[center_22%]"
+          className="h-full w-full object-contain object-[44%_43%]"
           priority
           unoptimized
         />
