@@ -11,7 +11,7 @@ export function Sidebar({ showPhotoRing = false }: SidebarProps) {
   return (
     <header className="flex flex-col items-center text-center pb-12 mb-5 border-b border-card-border">
       <div
-        className={`mb-[19px] size-[160px] overflow-hidden rounded-full ${
+        className={`mb-[19px] size-[160px] overflow-hidden rounded-full bg-[#0e0e0e] ${
           showPhotoRing ? "border border-white/10" : ""
         }`}
       >
