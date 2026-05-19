@@ -16,7 +16,7 @@ const experiences: Experience[] = [
     company: "Chapter",
     companyUrl: "https://www.businesswire.com/news/home/20260409159904/en/Chapter-Raises-%24100-Million-Series-E-to-Continue-Building-the-Trust-Layer-Between-Seniors-and-Technology-in-the-Age-of-AI",
     description:
-      "Led GTM strategy across all partnership verticals as the function's first hire, building it into a dedicated team. Selected and deployed the full GTM tech stack and owned RevOps infrastructure end to end. Built the outbound engine responsible for the majority of Chapter's net new partnership revenue as the company grew 10x from Series B to Series D.",
+      "Led GTM strategy across all partnership verticals as the function's first hire, building it into a dedicated team. Selected and deployed the full GTM tech stack and owned RevOps infrastructure end to end. Built the revenue engine responsible for the majority of Chapter's net new partnership revenue as the company grew 10x from Series B to Series D.",
   },
   {
     dateRange: "2020 — 2022",
