@@ -82,7 +82,7 @@ function GTMFeaturedProject() {
         Automated Lead Scoring and Outreach Engine
       </h3>
       <p className="text-muted leading-relaxed mb-8 max-w-3xl">
-        AI-powered automated enrichment, firmographic scoring, pain signal detection, ownership
+        Automated enrichment, firmographic scoring, pain signal detection, ownership
         assignment, and customized outreach generation. Integrated end-to-end with a live HubSpot
         CRM.
       </p>
