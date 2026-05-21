@@ -25,8 +25,9 @@ export function AboutSection() {
           Before that I was a financial advisor at a small RIA in Boston.
         </p>
         <p>
-          I took the past few months off to surf, summit volcanoes, write, and
-          deepen my technical skills.
+          I&apos;ve spent the past nine months building independently — GTM
+          pipeline systems, AI-powered sales tooling, advisory work. A few
+          volcanoes too.
         </p>
         <p>
           In my free time I enjoy playing tennis, guitar, writing, philosophy,
