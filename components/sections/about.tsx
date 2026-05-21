@@ -26,7 +26,7 @@ export function AboutSection() {
         </p>
         <p>
           I&apos;ve spent the past nine months building independently — GTM
-          pipeline systems, AI-powered sales tooling, advisory work. A few
+          pipeline systems, revops AI workflows, advisory work. A few
           volcanoes too.
         </p>
         <p>
