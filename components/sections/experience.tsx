@@ -15,7 +15,7 @@ const experiences: Experience[] = [
     title: "Special Projects Lead",
     company: "Adaptive",
     description:
-      "Lead projects across the sales team. Built internal tools the team works from every day, and an AI-agent setup for analysis that keeps patient data private.",
+      "Rebuilding how the sales team works, and the tools it runs on.",
   },
   {
     dateRange: "2025 — 2026",
