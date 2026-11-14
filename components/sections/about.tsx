@@ -22,9 +22,6 @@ export function AboutSection() {
           During that time, Chapter raised from series B to series D and grew 10x.
         </p>
         <p>
-          Before that I was a financial advisor at a small RIA in Boston.
-        </p>
-        <p>
           After Chapter, I spent most of a year building independently: sales
           tools of my own and some advisory work. A few volcanoes too.
         </p>
