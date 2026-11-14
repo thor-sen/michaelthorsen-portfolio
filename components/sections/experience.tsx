@@ -15,14 +15,14 @@ const experiences: Experience[] = [
     title: "Special Projects Lead",
     company: "Adaptive",
     description:
-      "Lead projects across the sales team, from how roles are set up to the tools the team uses every day. Built the app the care coordination team works from: one task list drawing on the referral, medical record and phone systems, where tasks close on their own once the work is done. Set up how analysis gets done with AI coding agents, with patient privacy protected by default.",
+      "Lead projects across the sales team. Built internal tools the team works from every day, and an AI-agent setup for analysis that keeps patient data private.",
   },
   {
     dateRange: "2025 — 2026",
     title: "Builder and Advisor",
     company: "Independent",
     description:
-      "Built sales tools of my own, including a system that scores and routes new leads in HubSpot and drafts outreach for each rep, and an AI tool that grades sales calls. Took on advisory work alongside.",
+      "Built my own sales tools, including a lead scoring and outreach system on HubSpot and an AI sales call grader. Advisory work alongside.",
   },
   {
     dateRange: "2022 — 2025",
