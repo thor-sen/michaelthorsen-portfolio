@@ -16,7 +16,7 @@ export function AboutSection() {
           from scratch.
         </p>
         <p>
-          I spent the last three and a half years at Chapter, a Medicare guidance
+          I spent three and a half years at Chapter, a Medicare guidance
           startup, where I built the outbound motion, BDR team, and RevOps
           infrastructure that scaled partnerships across multiple verticals.
           During that time, Chapter raised from series B to series D and grew 10x.
@@ -25,13 +25,12 @@ export function AboutSection() {
           Before that I was a financial advisor at a small RIA in Boston.
         </p>
         <p>
-          After Chapter, I spent most of a year building independently: GTM
-          pipeline systems, AI RevOps workflows, advisory work. A few
-          volcanoes too.
+          After Chapter, I spent most of a year building independently: sales
+          tools of my own and some advisory work. A few volcanoes too.
         </p>
         <p>
-          Now I&apos;m at Adaptive, an AI-native home health company, where I
-          lead special projects across the sales organization.
+          Now I&apos;m at Adaptive, a home health company, where I lead special
+          projects for the sales team.
         </p>
         <p>
           In my free time I enjoy playing tennis, guitar, writing, philosophy,
