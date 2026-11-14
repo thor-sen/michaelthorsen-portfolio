@@ -25,9 +25,13 @@ export function AboutSection() {
           Before that I was a financial advisor at a small RIA in Boston.
         </p>
         <p>
-          I&apos;ve spent the past nine months building independently — GTM
-          pipeline systems, AI revops workflows, advisory work. A few
+          After Chapter, I spent most of a year building independently: GTM
+          pipeline systems, AI RevOps workflows, advisory work. A few
           volcanoes too.
+        </p>
+        <p>
+          Now I&apos;m at Adaptive, an AI-native home health company, where I
+          lead special projects across the sales organization.
         </p>
         <p>
           In my free time I enjoy playing tennis, guitar, writing, philosophy,

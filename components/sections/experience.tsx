@@ -11,6 +11,13 @@ interface Experience {
 
 const experiences: Experience[] = [
   {
+    dateRange: "2026 — Present",
+    title: "Special Projects Lead",
+    company: "Adaptive",
+    description:
+      "Lead the transformation of Adaptive's sales organization, from how the team is structured to the internal tools it runs on. Build workflow software and analytics for sales and operations teams, shipped by directing AI coding agents.",
+  },
+  {
     dateRange: "2022 — 2025",
     title: "Growth Lead",
     company: "Chapter",
