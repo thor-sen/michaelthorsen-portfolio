@@ -6,7 +6,8 @@ interface Experience {
   company: string;
   /** Omit or leave empty for a non-linked company name */
   companyUrl?: string;
-  description: string;
+  /** Omit to show the title line only */
+  description?: string;
 }
 
 const experiences: Experience[] = [
@@ -14,8 +15,6 @@ const experiences: Experience[] = [
     dateRange: "2026 — Present",
     title: "Special Projects Lead",
     company: "Adaptive",
-    description:
-      "Rebuilding how the sales team works, and the tools it runs on.",
   },
   {
     dateRange: "2025 — 2026",
@@ -75,9 +74,11 @@ function ExperienceCard({ experience }: { experience: Experience }) {
             </span>
           )}
         </h3>
-        <p className="mt-2 text-sm leading-normal text-muted">
-          {experience.description}
-        </p>
+        {experience.description ? (
+          <p className="mt-2 text-sm leading-normal text-muted">
+            {experience.description}
+          </p>
+        ) : null}
       </div>
     </div>
   );
